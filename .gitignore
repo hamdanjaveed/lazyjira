@@ -19,6 +19,9 @@
 !README.md
 !LICENSE
 
+!.pre-commit-config.yaml
+!committed.toml
+
 # !Makefile
 
 # ...even if they are in subdirectories

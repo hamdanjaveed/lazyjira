@@ -1,0 +1,19 @@
+# https://github.com/crate-ci/committed/blob/master/docs/reference.md#config-fields
+
+style = "conventional"
+allowed_types = [
+    "feat",
+    "fix",
+    "docs",
+    "test",
+    "build",
+    "ci",
+    "perf",
+    "refactor",
+    "revert",
+    "style",
+    "chore",
+]
+subject_length = 72
+line_length = 100
+subject_capitalized = false
