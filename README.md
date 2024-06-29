@@ -2,7 +2,8 @@
 
 A Terminal UI for Jira.
 
-Heavily inspired by these awesome tools:
+The motivation for the project came from using [jira-cli](https://github.com/ankitpokhrel/jira-cli) and wishing it had
+a TUI similar to these awesome projects:
 
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [lazydocker](https://github.com/jesseduffield/lazydocker)
@@ -16,12 +17,18 @@ Using `lazyjira` you can:
 
 ### Setup
 
-- Activate [hermit](https://cashapp.github.io/hermit/)
+- Install and activate [hermit](https://cashapp.github.io/hermit/)
 - Install [pre-commit](https://pre-commit.com/) hooks:
   ```shell
   pre-commit install
   pre-commit install -t commit-msg
   ```
+- Install [Docker](https://www.docker.com/)
+- Spin up a Jira instance by running `docker compose up [-d]` and following the instructions once its up
+  - This involves setting up a trial license from Atlassian
+- Create a sample project in Jira, this should contain a bunch of pre-populated tickets
+
+## Contributing
 
 ### Git
 
