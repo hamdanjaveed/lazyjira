@@ -30,11 +30,14 @@ func ParseTable(t io.Reader) ([][]string, error) {
 	for i := 1; i < len(rows); i++ {
 		row := make([]string, len(widths))
 		r := rows[i]
+		// Note: bit of a hack for now, in case the last column(s) don't have data, the header will exist but the
+		// row's length will be up-to the last column with data. Pad the rest of the string till it matches the
+		// header's length. Could probably be smarter about this with a check in the loop below.
 		if len(r) < len(rows[0]) {
 			r += strings.Repeat(" ", len(rows[0])-len(r))
 		}
 		if len(r) != len(rows[0]) {
-			panic("wtf")
+			return nil, lgerrors.Errorf("expected row length '%d' to match header length '%d'", len(r), len(rows[0]))
 		}
 		ptr := 0
 		for j := 0; j < len(widths); j++ {
