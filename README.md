@@ -1,5 +1,7 @@
 # lazyjira
 
+![build](https://github.com/hamdanjaveed/lazyjira/actions/workflows/go.yaml/badge.svg)
+
 A Terminal UI for Jira.
 
 The motivation for the project came from using [jira-cli](https://github.com/ankitpokhrel/jira-cli) and wishing it had
